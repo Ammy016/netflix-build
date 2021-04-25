@@ -1,0 +1,35 @@
+.banner{
+    height: 60vh;
+    object-fit: cover;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content{
+    padding-left: 4em;
+}
+
+.banner_buttons{
+    margin-bottom: 20px;
+}
+ 
+.banner-button{
+    margin-right: 2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:5px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.banner-button:hover{
+    color: #222;
+    background-color: #fff;
+    transition: all 0.2;
+}
+
+.banner_description{
+    font-size: 18px;
+}

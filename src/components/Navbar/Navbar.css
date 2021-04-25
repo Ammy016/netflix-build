@@ -1,0 +1,32 @@
+.Navbar{
+    background: transparent;
+    display:flex;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    align-items: center; 
+    z-index: 1;
+    width: 100%;
+    justify-content: space-between;
+    transition: ease-in 0.4s;
+}
+
+.show{
+    background-color:#222 ;
+}
+
+.nav_left{
+  
+}
+
+.Netflix-logo{
+    width: 100px;
+}
+
+.nav_right{
+   padding:20px 10px;
+}
+
+.avatar-logo{
+    width: 30px;
+}

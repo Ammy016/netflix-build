@@ -16,6 +16,7 @@
  
 .banner-button{
     margin-right: 2em;
+    opacity: 0.8;
     border: none;
     outline: none;
     cursor: pointer;

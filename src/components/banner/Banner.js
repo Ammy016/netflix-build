@@ -1,5 +1,7 @@
 import React from 'react'
 import './Banner.css'
+import axios from '../../http-requests/axios'
+import request from '../../http-requests/request'
 
 function Banner() {
 

@@ -1,9 +1,27 @@
-import React from 'react'
+import React , {useState , useEffect }from 'react'
 import './Banner.css'
-import axios from '../../http-requests/axios'
-import request from '../../http-requests/request'
+// import axios from '../../http-requests/axios'
+import axios from 'axios'
+import requests from '../../http-requests/request'
 
 function Banner() {
+
+    const [movie , setMovie] =  useState([]);
+
+    useEffect(() => {
+        async function fetchData () {
+            const request = await axios.get(`https://www.themoviedb.org/3${requests.fetchNetflixOriginals}`);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random()* request.data.results.length - 1)
+                ]
+            );
+            return request
+        }
+        fetchData();
+    }, [])
+
+    console.log(movie);
 
     const bannerStyle = {
         backgroundImage:'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo_Y1UZGjwSwlCkHnoiwJIwQKNw5cVkLDqPQ&usqp=CAU")',
@@ -11,8 +29,8 @@ function Banner() {
         backgroundSize : "cover"
     }
 
-    const minifyText = () => {
-        
+    const minifyText = ( str , n ) => {
+        return str ?.length > n ? str.substr(n-1) + '...' : str
     }
 
     return (

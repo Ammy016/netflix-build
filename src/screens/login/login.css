@@ -1,0 +1,47 @@
+.loginScreen{
+    background:linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%),
+                url('https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg') center no-repeat;
+    height: 100vh;
+}
+
+.netflix_logo{
+    width: 120px;
+    margin-left: 15px;
+}
+.sign_in_btn{
+    background-color: #dd111a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #fff;
+    opacity: 0.8;
+    transition: 600ms;
+    letter-spacing: 1px;
+    padding: 0.6rem 1.1rem;
+}
+
+.sign_in_btn:hover{
+    opacity: 9;
+    transition: 600ms;
+    transform: scale(1.1);
+}
+.Localized_text{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+}
+.Localized_text:last-child {
+    font-weight: lighter;
+}
+.Localized_text_2{
+    font-size: 24px;
+    font-weight: 500;
+    margin:15px 0px;
+}

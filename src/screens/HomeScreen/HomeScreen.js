@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from '../banner/Banner'
-import Navbar from '../Navbar/Navbar'
+import Banner from '../../components/banner/Banner'
+import Navbar from '../../components/Navbar/Navbar'
 
 function HomeScreen() {
     return (

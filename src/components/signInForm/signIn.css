@@ -1,0 +1,53 @@
+.signIn-container{
+    top:30vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 30px;
+}
+.signIn{
+    padding: 50px  ;
+    background-color:rgba(0,0,0,0.85);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signIn > h2{
+    color: #ffffff;
+    margin-top: 0px;
+}
+.signIn > form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.signIn > form > input{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+} 
+
+.signIn > form > button{
+    margin: 10px 0px;
+    padding: 0.5rem 1rem;
+    background-color: #dd111a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    color: #fff;
+} 
+.signIn > span {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.demo-text{
+    color: rgb(136, 135, 135) !important;
+}
+.signUp-Now:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

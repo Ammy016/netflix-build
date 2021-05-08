@@ -2,19 +2,26 @@ import React , { useEffect } from 'react';
 import './App.css';
 import HomeScreen from './screens/HomeScreen/HomeScreen'
 import Login from "./screens/login/Login"
+import ProfileScreen from "./screens/ProfileScreen/ProfileScreen"
 import { auth }  from './firebase'
+import { useDispatch , useSelector} from 'react-redux'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { selectUser , login , logout } from './features/userSlice';
 
 function App() {
-  const user = false;
-
+  const user = useSelector(selectUser )
+  const dispatch = useDispatch()
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {
-      if(userAuth){
-        //logged in
-        console.log(userAuth);
+      if(userAuth){ 
+        dispatch(
+          login({
+            uid : userAuth.uid,
+            email : userAuth.email,
+          })
+        )
       }else{
-
+        dispatch(logout)
       }
     })
     return unsubscribe
@@ -24,12 +31,17 @@ function App() {
   return (
     <div className="App">
      <Router>
-        <Switch>
-
-          { user ? (<Route path="/">
-            <HomeScreen />
-          </Route>) : <Login />}
-        </Switch>
+        
+          { user ? (
+           <Switch> 
+            <Route path='/profile'>
+              < ProfileScreen />
+            </Route>
+            <Route path="/">
+              <HomeScreen />
+            </Route>
+           </Switch>) : <Login />}
+       
     </Router>
     </div>
   );
